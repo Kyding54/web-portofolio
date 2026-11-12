@@ -91,3 +91,52 @@ main, footer { position: relative; z-index: 1; }
 
 /* Tombol back-to-top: transisi muncul/hilang */
 #to-top { transition: opacity .3s, transform .3s, box-shadow .3s; }
+
+/* ===== TOMBOL PAUSE LAGU ===== */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Jarak antara tombol musik dengan menu/hamburger */
+}
+
+.music-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0; /* Mencegah tombol gepeng di layar HP kecil */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent; /* Menghilangkan kotak biru saat diketuk di HP */
+}
+
+.music-btn:hover {
+  border-color: #29b6f6;
+  color: #29b6f6;
+  background-color: rgba(41, 182, 246, 0.12);
+}
+
+.music-btn.playing {
+  border-color: #29b6f6;
+  color: #29b6f6;
+  background-color: rgba(41, 182, 246, 0.15);
+  box-shadow: 0 0 12px rgba(41, 182, 246, 0.35);
+}
+
+/* Penyesuaian khusus layar HP */
+@media (max-width: 768px) {
+  .nav-right {
+    gap: 12px; /* Jarak lebih rapat dengan ikon hamburger */
+  }
+
+  .music-btn {
+    width: 32px;
+    height: 32px;
+  }
+}

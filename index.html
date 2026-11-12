@@ -13,6 +13,8 @@
   <!-- Tailwind CSS (CDN) dipakai untuk tata letak; warna & animasi ada di style.css -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
+
+  
 </head>
 
 <body>
@@ -101,6 +103,23 @@
       </div>
     </section>
 
+    <!-- ================= SPOTIFY WIDGET ================= -->
+<div class="max-w-6xl mx-auto px-4 sm:px-5 pt-8 md:pt-16 pb-2">
+  <div class="card p-3 sm:p-4 md:p-5 overflow-hidden">
+    <p class="text-xs sm:text-sm text-slate-400 mb-2 sm:mb-3">🎧 Lagu Fav</p>
+
+    <div class="w-full max-w-full md:max-w-2xl">
+      <iframe
+        class="w-full h-[152px]"
+        style="border-radius:12px; border:0;"
+        src="https://open.spotify.com/embed/playlist/6wPiY6fEJR0ZS56BbR9fVZ?utm_source=generator&si=85f63b9975cc4bf6"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+
     <!-- ================= KEAHLIAN ================= -->
     <section id="keahlian" class="py-20 px-5">
       <div class="max-w-6xl mx-auto">
@@ -153,9 +172,8 @@
         <p class="text-sm text-slate-400 mt-1">&copy; <span id="year"></span> Fernando Arka Pratama. Semua hak dilindungi.</p>
       </div>
       <ul class="flex gap-3 text-sm font-medium">
-        <li><a href="#" class="card block px-4 py-2">GitHub</a></li>
-        <li><a href="#" class="card block px-4 py-2">Instagram</a></li>
-        <li><a href="#" class="card block px-4 py-2">LinkedIn</a></li>
+        <li><a href="https://github.com/Kyding54" target="_blank" rel="noopener noreferrer" class="card block px-4 py-2">GitHub</a></li>
+        <li><a href="https://www.instagram.com/nando.odnan_?rpxt=MW1yZ2ZydDQzeTZjcA==" target="_blank" rel="noopener noreferrer" class="card block px-4 py-2">Instagram</a></li>
       </ul>
     </div>
   </footer>
@@ -182,7 +200,7 @@
 
   <!-- Backsound lagu-->
   <audio autoplay loop id="bgAudio">
-  <source src="lagu-anda.mp3" type="audio/mpeg">
+  <source src="lagu/" type="audio/mpeg">
 </audio>
 
   <script src="script.js" defer></script>
